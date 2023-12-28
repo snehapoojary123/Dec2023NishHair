@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Nishhair App Test Regression Suite" thread-count="4"
+	parallel="tests" verbose="4">
+	
+	<test name="Search Page Test_chrome_120.0">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="120.0" />
+		<parameter name="testcasename" value="Saerch Page Test Chrome" />
+		
+		<classes>
+			<class name="com.qa.test.SearchPageTest" />
+						
+		</classes>
+	</test> 
+	<!--  
+ 	<test name="Search Page Test_firefox_117.0">
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="117.0" />
+		<parameter name="testcasename" value="Search Page Test Firefox" />
+		
+		<classes>
+			<class name="com.qa.test.SearchPageTest" />
+						
+		</classes>
+	</test>   -->
+	 
+	<test name="Product Info Page Test_chrome_117.0">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="117.0" />
+		<parameter name="testcasename" value="Product Info Test Chrome" />
+		
+		<classes>
+			<class name="com.qa.test.ProductInfoTest" />
+		</classes>
+	</test>
+	
+	
+	
+	<listeners>
+		<listener
+			class-name="com.qa.listeners.ExtentReportListener" />
+			<listener
+			class-name="com.qa.listeners.TestAllureListener" />
+			<listener
+			class-name="com.qa.listeners.TestAllureListener" />
+		
+	</listeners>
+
+
+</suite>
